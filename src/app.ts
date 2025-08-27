@@ -7,7 +7,11 @@ const app: Application = express();
 
 app.use(express.json());
 
-app.use(cors({ origin: ["http://localhost:3000"] }));
+app.use(
+	cors({
+		origin: ["https://jp-blog-liart.vercel.app", "http://localhost:3000"],
+	})
+);
 
 app.use("/api", rootRoute);
 
